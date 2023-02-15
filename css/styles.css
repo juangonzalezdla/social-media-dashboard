@@ -13,14 +13,14 @@
 
   --Facebook: hsl(208, 92%, 53%);
   --Twitter: hsl(203, 89%, 53%);
-  --Instagram: linear gradient hsl(37, 97%, 70%) to hsl(329, 70%, 58%);
+  --Instagram: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
   --YouTube: hsl(348, 97%, 39%);
 
   /* Dark mode */
-  --Toggle: linear gradient hsl(210, 78%, 56%) to hsl(146, 68%, 55%);
+  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
   /* Light mode */
-  --Toggle: hsl(230, 22%, 74%);
+  --Toggle-light: hsl(230, 22%, 74%);
 
   /* Dark theme */
   --Very-Dark-Blue-BG: hsl(230, 17%, 14%);
@@ -59,6 +59,33 @@ body::before {
 
 .container {
   max-width: 1200px;
-  padding:  2rem 4rem 0 4rem;
+  padding:  3rem 4rem 0 4rem;
   margin: auto;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.header__main__title {
+  color: var(--White-Text);
+  margin-bottom: 5px;
+}
+
+.header__main__number {
+  font-weight: 700;
+}
+
+.toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.toggle__name {
+  font-weight: 700;
 }
