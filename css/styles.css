@@ -17,7 +17,7 @@
   --YouTube: hsl(348, 97%, 39%);
 
   /* Dark mode */
-  --Toggle: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  --Toggle-dark: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
 
   /* Light mode */
   --Toggle-light: hsl(230, 22%, 74%);
@@ -44,6 +44,10 @@ body {
   color: var(--Desaturated-Blue-Text);
   position: relative;
 }
+body.light {
+  background-color: var(--White-BG);
+  color: var(--Dark-Grayish-Blue-Text);
+}
 
 body::before {
   content: "";
@@ -56,6 +60,9 @@ body::before {
   background: var(--Very-Dark-Blue-Top-BG-Pattern);
   z-index: -1;
 }
+body.light::before {
+  background: var(--Very-Pale-Blue-Top-BG-Pattern);
+}
 
 .container {
   max-width: 1200px;
@@ -63,6 +70,7 @@ body::before {
   margin: auto;
 }
 
+/* Header */ 
 .header {
   display: flex;
   justify-content: space-between;
@@ -74,18 +82,82 @@ body::before {
   color: var(--White-Text);
   margin-bottom: 5px;
 }
+body.light .header__main__title {
+  color: var(--Very-Dark-Blue-Text);
+}
 
 .header__main__number {
   font-weight: 700;
 }
 
+/* Toggle switch */
 .toggle {
   display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   gap: 10px;
 }
 
+.toggle__switch:hover + div {
+  cursor: pointer;
+  color: var(--White-Text);
+}
+body.light .toggle__switch:hover + div {
+  cursor: pointer;
+  color: var(--Very-Dark-Blue-Text);
+}
+
 .toggle__name {
   font-weight: 700;
+}
+
+.toggle__switch__input {
+  display: none;
+}
+
+.toggle__switch__label {
+  display: flex;
+  align-items: center; 
+  width: 52px;
+  height: 26px;
+  background: var(--Toggle-dark);
+  border-radius: 50px;
+  padding: 5px;
+  position: relative;
+}
+
+.toggle__switch__label:hover {
+  cursor: pointer;
+}
+
+body.light .toggle__switch__label {
+  background: var(--Desaturated-Blue-Text);
+}
+body.light .toggle__switch__label:hover {
+  background: var(--Toggle-dark);
+}
+
+.toggle__switch__label i {
+  color: var(--Very-Dark-Blue-Top-BG-Pattern);
+}
+body.light .toggle__switch__label i {
+  color: var(--Very-Pale-Blue-Top-BG-Pattern);
+}
+
+.toggle__switch__label .bi-circle-fill{
+  position: absolute;
+  background-color: var(--Very-Dark-Blue-Top-BG-Pattern);
+  height: 22px;
+  width: 22px;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+}
+body.light .toggle__switch__label .bi-circle-fill {
+  background-color: var(--Very-Pale-Blue-Top-BG-Pattern);
+}
+
+.toggle__switch__input:checked + .toggle__switch__label .bi-circle-fill {
+  transform: translateX(26px);
 }
