@@ -166,6 +166,7 @@ body.light .toggle__switch__label .bi-circle-fill {
 
 /* Top section */
 .top__section {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,6 +267,10 @@ body.light .card__middle__number {
 }
 
 /* bottom section */
+.bottom__section {
+  width: 100%;
+}
+
 .bottom__section__title {
   color: var(--White-Text);
   font-size: 1.5rem;
