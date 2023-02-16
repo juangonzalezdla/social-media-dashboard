@@ -176,7 +176,7 @@ body.light .toggle__switch__label .bi-circle-fill {
 
 .card {
   background-color: var(--Dark-Desaturated-Blue-Card-BG);
-  width: 260px;
+  width: 240px;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -260,7 +260,90 @@ body.light .card__middle__number {
   color: var(--Lime-Green);
   font-weight: 700;
 }
-.card__bottom__span--youtube {
+.card__bottom__span--red {
   color: var(--Bright-Red);
   font-weight: 700;
+}
+
+/* bottom section */
+.bottom__section__title {
+  color: var(--White-Text);
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+body.light .bottom__section__title {
+  color: inherit;
+}
+
+.card2__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  margin-bottom: 3rem;
+}
+
+.card2 {
+  background-color: var(--Dark-Desaturated-Blue-Card-BG);
+  width: 240px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  border-radius: 3px;
+}
+body.light .card2 {
+  background-color: var(--Light-Grayish-Blue-Card-BG);
+}
+.card2:hover {
+  background-color: var(--Dark-Desaturated-Blue-Card-BG-hover);
+}
+body.light .card2:hover {
+  background-color: var(--Light-Grayish-Blue-Card-BG-hover);
+}
+
+.card2__top {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card2__top__text {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.card2__bottom {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.card2__bottom__number {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--White-Text);
+}
+body.light .card2__bottom__number {
+  color: var(--Very-Dark-Blue-Text);
+}
+
+.card2__bottom__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+.card2__bottom__figure {
+  font-weight: 700;
+  color: var(--Lime-Green);
+}
+.card2__bottom__figure--red {
+  font-weight: 700;
+  color: var(--Bright-Red);
 }
